@@ -11,11 +11,20 @@ export default function Hero() {
       aria-label="OlyLife PEMF and Terahertz wellness therapy — start your healing journey"
     >
       <div className="absolute inset-0 bg-deep-green" />
+      <div className="absolute inset-0 opacity-[0.08]">
+        <Image
+          src="/images/hawaii-ocean.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 50%, rgba(61,139,139,0.3) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(212,148,76,0.15) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 30% 50%, rgba(61,139,139,0.25) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(212,148,76,0.12) 0%, transparent 50%)",
         }}
       />
 

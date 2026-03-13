@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const pillars = [
   {
@@ -32,8 +33,16 @@ export default function Technology() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="technology" className="py-24 md:py-32 bg-warm-white" ref={ref} aria-label="PEMF and Terahertz therapy science and technology">
-      <div className="max-w-5xl mx-auto px-8">
+    <section id="technology" className="relative py-24 md:py-32 bg-warm-white overflow-hidden" ref={ref} aria-label="PEMF and Terahertz therapy science and technology">
+      <div className="absolute inset-0 opacity-[0.04]">
+        <Image
+          src="/images/tropical-leaves.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="relative z-10 max-w-5xl mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

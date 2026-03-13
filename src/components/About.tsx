@@ -2,14 +2,23 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-deep-green text-white" ref={ref} aria-label="About OlyLife International and our wellness mission">
-      <div className="max-w-4xl mx-auto px-8 text-center">
+    <section id="about" className="relative py-24 md:py-32 bg-deep-green text-white overflow-hidden" ref={ref} aria-label="About OlyLife International and our wellness mission">
+      <div className="absolute inset-0 opacity-[0.07]">
+        <Image
+          src="/images/hawaii-sunset.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
