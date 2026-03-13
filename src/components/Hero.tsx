@@ -37,7 +37,7 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.2 }}
               className="text-[13px] tracking-[0.3em] uppercase text-white/40 mb-6 font-light"
             >
-              Aloha &middot; Welcome to OlyLife
+              Welcome to OlyLife
             </motion.p>
 
             <motion.h1
@@ -46,9 +46,9 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.3 }}
               className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6"
             >
-              Healing starts
+              Start your
               <br />
-              with <em className="text-copper-light font-normal">ohana.</em>
+              healing <em className="text-copper-light font-normal">journey.</em>
             </motion.h1>
 
             <motion.p
@@ -58,7 +58,7 @@ export default function Hero() {
               className="text-white/50 text-lg max-w-md leading-relaxed font-light mb-10"
             >
               PEMF and Terahertz therapy that helps your body heal the way
-              nature intended. Shared with aloha by 50,000+ people worldwide.
+              nature intended. Trusted by 50,000+ people worldwide.
             </motion.p>
 
             <motion.div

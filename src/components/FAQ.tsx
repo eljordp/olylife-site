@@ -39,7 +39,7 @@ const faqs: FAQItem[] = [
   {
     question: "Is there a guarantee?",
     answer:
-      "Yes — every OlyLife device comes with a 30-day satisfaction guarantee and full product warranty. We stand behind our ohana.",
+      "Yes — every OlyLife device comes with a 30-day satisfaction guarantee and full product warranty. We stand behind every device we sell.",
   },
 ];
 

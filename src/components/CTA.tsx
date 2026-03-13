@@ -16,8 +16,8 @@ export default function CTA() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="font-serif text-4xl md:text-5xl text-charcoal leading-[1.15] mb-6">
-            Your healing journey
-            <em className="text-copper"> starts with aloha.</em>
+            Ready to feel
+            <em className="text-copper"> like yourself again?</em>
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">

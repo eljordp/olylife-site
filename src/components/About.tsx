@@ -25,19 +25,19 @@ export default function About() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-[12px] tracking-[0.3em] uppercase text-sage-light/60 mb-4 font-light">
-            Our Ohana
+            About OlyLife
           </p>
           <h2 className="font-serif text-4xl md:text-5xl leading-[1.15] mb-8">
-            We take care of our own.
+            Your body wants to heal.
             <br />
-            <em className="text-copper-light">That&apos;s the aloha way.</em>
+            <em className="text-copper-light">We give it the tools.</em>
           </h2>
           <p className="text-white/50 text-[16px] leading-[1.9] font-light max-w-2xl mx-auto mb-16">
             OlyLife combines PEMF therapy, Terahertz frequency, and Earth&apos;s
             natural geomagnetism into devices that work with your body — not
-            against it. No chemicals. No side effects. Like the healing spirit
-            of the islands, we believe wellness is meant to be shared. Founded
-            in 2018, our ohana now spans 50,000+ people across 30+ countries.
+            against it. No chemicals. No side effects. Just natural healing
+            technology designed for better living. Founded in 2018, now trusted
+            by 50,000+ people across 30+ countries.
           </p>
 
           <div className="flex flex-wrap justify-center gap-12">

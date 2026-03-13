@@ -9,7 +9,7 @@ const navLinks = [
   { label: "How It Works", href: "#technology" },
   { label: "Devices", href: "#products" },
   { label: "Stories", href: "#testimonials" },
-  { label: "Our Ohana", href: "#about" },
+  { label: "About", href: "#about" },
 ];
 
 export default function Navigation() {
