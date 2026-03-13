@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const pillars = [
   {
@@ -96,25 +97,38 @@ export default function Technology() {
           ))}
         </div>
 
-        {/* Outcomes */}
+        {/* Outcomes with lifestyle image */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-24 pt-16 border-t border-sand/60"
         >
-          <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-10 font-light">
-            What our customers experience
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-8">
-            {outcomes.map((outcome) => (
-              <div key={outcome} className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-copper/60 flex-shrink-0" />
-                <span className="text-charcoal/70 text-[15px] font-light">
-                  {outcome}
-                </span>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-10 font-light">
+                What our customers experience
+              </p>
+              <div className="grid grid-cols-2 gap-y-6 gap-x-8">
+                {outcomes.map((outcome) => (
+                  <div key={outcome} className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-copper/60 flex-shrink-0" />
+                    <span className="text-charcoal/70 text-[15px] font-light">
+                      {outcome}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="relative aspect-[4/5] hidden lg:block">
+              <Image
+                src="/images/lifestyle-woman.webp"
+                alt="Wellness and healing"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-warm-white/20 to-transparent" />
+            </div>
           </div>
         </motion.div>
       </div>

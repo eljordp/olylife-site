@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function About() {
   const ref = useRef(null);
@@ -52,6 +53,28 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col justify-center"
           >
+            {/* Lifestyle images */}
+            <div className="grid grid-cols-2 gap-4 mb-12">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/hero-lady.webp"
+                  alt="OlyLife customer"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-deep-green/20" />
+              </div>
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/lifestyle-man.webp"
+                  alt="OlyLife customer"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-deep-green/20" />
+              </div>
+            </div>
+
             <div className="space-y-0">
               {[
                 { number: "50,000+", label: "People using OlyLife worldwide" },

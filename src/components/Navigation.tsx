@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Science", href: "#technology" },
@@ -34,7 +35,14 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-8 py-5 flex items-center justify-between">
-          <a href="#hero" className="group">
+          <a href="#hero" className="group flex items-center gap-2.5">
+            <Image
+              src="/images/oly-life-badge.png"
+              alt="OlyLife"
+              width={28}
+              height={28}
+              className="opacity-90"
+            />
             <span
               className={`font-serif text-2xl font-medium tracking-wide transition-colors duration-500 ${
                 scrolled ? "text-charcoal" : "text-white"
