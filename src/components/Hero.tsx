@@ -12,10 +12,10 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-deep-green" />
       <div
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-40"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 50%, rgba(107,127,94,0.3) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 30% 50%, rgba(61,139,139,0.3) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(212,148,76,0.15) 0%, transparent 50%)",
         }}
       />
 

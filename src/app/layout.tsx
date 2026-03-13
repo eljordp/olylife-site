@@ -6,7 +6,7 @@ const siteUrl = "https://olylife-site.vercel.app";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#2D3B28",
+  themeColor: "#1B4B4B",
 };
 
 export const metadata: Metadata = {

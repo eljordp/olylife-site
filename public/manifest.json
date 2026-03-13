@@ -4,8 +4,8 @@
   "description": "Clinically-inspired PEMF and Terahertz therapy devices for total body wellness. Pain relief, better sleep, and renewed energy — trusted by 50,000+ people worldwide.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFDF8",
-  "theme_color": "#2D3B28",
+  "background_color": "#FFF8EE",
+  "theme_color": "#1B4B4B",
   "icons": [
     {
       "src": "/images/oly-life-badge.png",
