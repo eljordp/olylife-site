@@ -1,22 +1,14 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "OlyLife | Start Your Healing Journey Today",
+  title: "OlyLife | Start Your Healing Journey",
   description:
-    "Experience the future of wellness with OlyLife's PEMF and Terahertz therapy devices. Clinically-inspired technology for total body healing, pain relief, and cellular rejuvenation.",
-  keywords:
-    "OlyLife, PEMF therapy, terahertz therapy, wellness, healing, pain relief, cellular health",
+    "Clinically-inspired PEMF and Terahertz therapy for total body wellness. Trusted by over 50,000 people worldwide.",
   openGraph: {
-    title: "OlyLife | Start Your Healing Journey Today",
+    title: "OlyLife | Start Your Healing Journey",
     description:
-      "Experience the future of wellness with OlyLife's PEMF and Terahertz therapy devices.",
+      "Clinically-inspired PEMF and Terahertz therapy for total body wellness.",
     type: "website",
   },
 };
@@ -28,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

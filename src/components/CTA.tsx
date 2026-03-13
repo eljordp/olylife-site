@@ -2,69 +2,60 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Phone, Mail } from "lucide-react";
 
 export default function CTA() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-24 md:py-32 bg-white relative overflow-hidden" ref={ref}>
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-emerald/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full translate-x-1/2 translate-y-1/2" />
-
-      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <section className="py-28 md:py-40 bg-warm-white" ref={ref}>
+      <div className="max-w-3xl mx-auto px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-emerald text-sm font-semibold tracking-widest uppercase">
-            Your Journey Starts Now
-          </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal mt-4 mb-6">
-            Ready to Transform
+          <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-6 font-light">
+            Your Journey Begins Here
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal leading-[1.15] mb-8">
+            You deserve to feel
             <br />
-            <span className="gradient-text">Your Health?</span>
+            <em className="text-copper">like yourself again.</em>
           </h2>
-          <p className="text-lg text-charcoal/60 max-w-2xl mx-auto mb-10">
-            Join over 50,000 people who have discovered the healing power of
-            OlyLife. Browse our product catalog and find the perfect device for
-            your wellness journey.
+          <p className="text-warm-gray text-lg leading-relaxed font-light mb-12 max-w-xl mx-auto">
+            Join the thousands of people who woke up one morning and realized the
+            pain was gone, the sleep was deep, and life felt possible again.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
               href="#products"
-              className="flex items-center gap-2 bg-emerald hover:bg-emerald-dark text-white px-10 py-4 rounded-full text-lg font-semibold tracking-wide transition-all hover:scale-105 pulse-glow"
+              className="group inline-flex items-center gap-3 bg-deep-green hover:bg-charcoal text-white px-10 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500"
             >
-              Browse Product Catalog
-              <ArrowRight size={20} />
+              Browse the collection
+              <span className="transition-transform group-hover:translate-x-1">
+                &rarr;
+              </span>
             </a>
             <a
               href="#testimonials"
-              className="flex items-center gap-2 border-2 border-charcoal/20 hover:border-emerald text-charcoal px-10 py-4 rounded-full text-lg font-semibold tracking-wide transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 text-warm-gray hover:text-charcoal text-[13px] tracking-[0.15em] uppercase transition-colors duration-300 border-b border-warm-gray/30 pb-0.5"
             >
-              Read More Stories
+              Read more stories
             </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8 text-charcoal/40 text-sm">
-            <a
-              href="tel:+1-800-OLYLIFE"
-              className="flex items-center gap-2 hover:text-emerald transition-colors"
-            >
-              <Phone size={16} />
-              <span>1-800-OLYLIFE</span>
-            </a>
-            <a
-              href="mailto:info@olylife.com"
-              className="flex items-center gap-2 hover:text-emerald transition-colors"
-            >
-              <Mail size={16} />
-              <span>info@olylife.com</span>
-            </a>
+          <div className="mt-16 pt-10 border-t border-sand/60">
+            <p className="text-warm-gray/50 text-[13px] font-light">
+              Questions? Reach us at{" "}
+              <a
+                href="mailto:info@olyprocessing.com"
+                className="text-sage hover:text-charcoal transition-colors border-b border-sage/30 pb-px"
+              >
+                info@olyprocessing.com
+              </a>
+            </p>
           </div>
         </motion.div>
       </div>

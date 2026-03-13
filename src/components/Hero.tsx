@@ -1,138 +1,106 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-end overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-navy" />
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-charcoal to-emerald-dark opacity-90" />
-
-      {/* Animated particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-gold/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [-20, 20, -20],
-              opacity: [0.2, 0.8, 0.2],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 4,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald/10 rounded-full blur-3xl" />
+      {/* Background — deep, warm, organic */}
+      <div className="absolute inset-0 bg-deep-green" />
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          background:
+            "radial-gradient(ellipse at 30% 50%, rgba(107,127,94,0.4) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(184,124,76,0.15) 0%, transparent 50%)",
+        }}
+      />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-8"
+      <div className="relative z-10 max-w-6xl mx-auto px-8 pb-24 pt-40 w-full">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.3 }}
+          className="text-[13px] tracking-[0.3em] uppercase text-white/40 mb-8 font-light"
         >
-          <Sparkles size={16} className="text-gold" />
-          <span className="text-white/80 text-sm tracking-wide">
-            PEMF & Terahertz Wellness Technology
-          </span>
-        </motion.div>
+          PEMF & Terahertz Wellness Technology
+        </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6"
+          transition={{ duration: 1.2, delay: 0.5 }}
+          className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] text-white leading-[1.1] max-w-4xl mb-8 font-medium"
         >
-          Start Your
+          Start your
           <br />
-          <span className="gradient-text">Healing Journey</span>
+          healing journey
           <br />
-          Today
+          <em className="text-copper-light font-normal">today.</em>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed"
+          transition={{ duration: 1, delay: 0.9 }}
+          className="text-white/50 text-lg md:text-xl max-w-lg leading-relaxed font-light mb-12"
         >
-          Discover how thousands of people are transforming their health with
-          OlyLife&apos;s revolutionary PEMF and Terahertz frequency technology.
-          Pain relief. Better sleep. Total body wellness.
+          Thousands of people have rediscovered what it feels like to live
+          without pain, sleep deeply, and move freely. This is where it begins.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          transition={{ duration: 1, delay: 1.2 }}
+          className="flex flex-col sm:flex-row gap-6 items-start"
         >
           <a
             href="#products"
-            className="bg-emerald hover:bg-emerald-dark text-white px-10 py-4 rounded-full text-lg font-semibold tracking-wide transition-all hover:scale-105 pulse-glow"
+            className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-8 py-4 text-sm tracking-[0.15em] uppercase transition-all duration-500"
           >
-            Browse Products
+            View Product Brochure
+            <span className="inline-block transition-transform group-hover:translate-x-1">
+              &rarr;
+            </span>
           </a>
           <a
             href="#testimonials"
-            className="border-2 border-white/30 hover:border-white/60 text-white px-10 py-4 rounded-full text-lg font-semibold tracking-wide transition-all hover:scale-105"
+            className="inline-flex items-center gap-3 text-white/50 hover:text-white text-sm tracking-[0.15em] uppercase transition-colors duration-300 py-4"
           >
-            See Real Results
+            Read their stories
           </a>
         </motion.div>
 
-        {/* Trust badges */}
+        {/* Understated trust line */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 text-white/40 text-sm"
+          transition={{ duration: 1.5, delay: 1.8 }}
+          className="mt-20 pt-8 border-t border-white/10 flex flex-wrap gap-12 text-white/25 text-[12px] tracking-[0.15em] uppercase font-light"
         >
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-emerald rounded-full" />
-            <span>FDA Registered Facility</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-emerald rounded-full" />
-            <span>50,000+ Happy Customers</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-emerald rounded-full" />
-            <span>30-Day Money Back</span>
-          </div>
+          <span>50,000+ Customers Worldwide</span>
+          <span>30-Day Satisfaction Guarantee</span>
+          <span>Active in 30+ Countries</span>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll line */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        transition={{ delay: 2 }}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ArrowDown size={24} className="text-white/40" />
-        </motion.div>
+          animate={{ height: ["0%", "100%", "0%"] }}
+          transition={{ duration: 3, repeat: Infinity }}
+          className="w-px bg-white/20 origin-top"
+          style={{ height: 60 }}
+        />
       </motion.div>
     </section>
   );

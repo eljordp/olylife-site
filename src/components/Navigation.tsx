@@ -5,11 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Technology", href: "#technology" },
-  { label: "Products", href: "#products" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "About", href: "#about" },
+  { label: "Science", href: "#technology" },
+  { label: "Collection", href: "#products" },
+  { label: "Stories", href: "#testimonials" },
+  { label: "Our Mission", href: "#about" },
 ];
 
 export default function Navigation() {
@@ -25,22 +24,19 @@ export default function Navigation() {
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, delay: 0.5 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "glass shadow-lg border-b border-white/20"
+            ? "bg-background/90 backdrop-blur-md border-b border-sand/50"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#hero" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-emerald flex items-center justify-center">
-              <span className="text-white font-bold text-lg">O</span>
-            </div>
+        <div className="max-w-6xl mx-auto px-8 py-5 flex items-center justify-between">
+          <a href="#hero" className="group">
             <span
-              className={`text-2xl font-bold tracking-tight transition-colors ${
+              className={`font-serif text-2xl font-medium tracking-wide transition-colors duration-500 ${
                 scrolled ? "text-charcoal" : "text-white"
               }`}
             >
@@ -48,14 +44,15 @@ export default function Navigation() {
             </span>
           </a>
 
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-emerald ${
-                  scrolled ? "text-charcoal" : "text-white/90"
+                className={`text-[13px] font-light tracking-[0.15em] uppercase transition-colors duration-300 ${
+                  scrolled
+                    ? "text-warm-gray hover:text-charcoal"
+                    : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -63,49 +60,66 @@ export default function Navigation() {
             ))}
             <a
               href="#products"
-              className="bg-emerald hover:bg-emerald-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all hover:scale-105 hover:shadow-lg"
+              className={`text-[13px] tracking-[0.15em] uppercase border-b transition-all duration-300 pb-0.5 ${
+                scrolled
+                  ? "text-charcoal border-charcoal hover:border-sage hover:text-sage"
+                  : "text-white border-white/50 hover:border-white"
+              }`}
             >
-              Shop Now
+              View Products
             </a>
           </div>
 
-          {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`md:hidden ${scrolled ? "text-charcoal" : "text-white"}`}
+            className={`md:hidden transition-colors ${
+              scrolled ? "text-charcoal" : "text-white"
+            }`}
           >
-            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </motion.nav>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white pt-24 px-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="fixed inset-0 z-40 bg-background flex flex-col justify-center items-center"
           >
-            <div className="flex flex-col gap-6">
-              {navLinks.map((link) => (
-                <a
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="absolute top-5 right-8 text-charcoal"
+            >
+              <X size={24} />
+            </button>
+            <div className="flex flex-col items-center gap-8">
+              {navLinks.map((link, i) => (
+                <motion.a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-2xl font-semibold text-charcoal hover:text-emerald transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="font-serif text-3xl text-charcoal hover:text-sage transition-colors"
                 >
                   {link.label}
-                </a>
+                </motion.a>
               ))}
-              <a
+              <motion.a
                 href="#products"
                 onClick={() => setMobileOpen(false)}
-                className="bg-emerald text-white px-8 py-4 rounded-full text-lg font-semibold text-center mt-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="mt-4 text-sm tracking-[0.2em] uppercase border-b border-charcoal pb-1 text-charcoal"
               >
-                Shop Now
-              </a>
+                View Products
+              </motion.a>
             </div>
           </motion.div>
         )}

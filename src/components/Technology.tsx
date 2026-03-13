@@ -1,155 +1,122 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, Radio, Globe, Heart, Brain, Shield } from "lucide-react";
 
-const technologies = [
+const pillars = [
   {
-    icon: Zap,
-    title: "PEMF Technology",
+    number: "01",
+    title: "PEMF Therapy",
     subtitle: "Pulsed Electromagnetic Field",
-    description:
-      "Low-frequency electromagnetic fields pulsed into the body to enhance natural recovery processes by stimulating cellular repair, improving circulation, and reducing inflammation at the cellular level.",
+    body: "Gentle, low-frequency electromagnetic pulses reach deep into your body to stimulate cellular repair, reduce inflammation, and restore the natural recovery processes that slow with age. Used in clinical settings for decades — now available for home use.",
   },
   {
-    icon: Radio,
+    number: "02",
     title: "Terahertz Frequency",
-    subtitle: "Cellular Resonance Therapy",
-    description:
-      "Terahertz waves resonate with the natural frequencies of the human body, promoting cellular health, improving blood circulation, and enhancing overall energy levels for deep, lasting wellness.",
+    subtitle: "Cellular Resonance",
+    body: "Terahertz waves operate at frequencies that match your body's own cellular vibrations. This resonance promotes circulation, supports cellular health, and activates your body's innate healing intelligence — gently, naturally, without chemicals.",
   },
   {
-    icon: Globe,
+    number: "03",
     title: "Geomagnetism",
-    subtitle: "Earth's Natural Healing Field",
-    description:
-      "Harnessing the Earth's natural magnetic field through bioelectromagnetic technology to enhance cellular function — aligning your body with the healing frequencies found in nature.",
+    subtitle: "Earth's Healing Field",
+    body: "For millennia, humans lived in harmony with the Earth's magnetic field. Modern life has disconnected us. OlyLife's bioelectromagnetic technology reconnects your cells with these natural frequencies, restoring balance at the deepest level.",
   },
 ];
 
-const benefits = [
-  { icon: Heart, label: "Pain Relief", desc: "Reduce chronic and acute pain" },
-  { icon: Brain, label: "Better Sleep", desc: "Deep, restorative rest" },
-  {
-    icon: Shield,
-    label: "Immune Support",
-    desc: "Strengthen natural defenses",
-  },
-  { icon: Zap, label: "More Energy", desc: "Cellular-level vitality" },
-  { icon: Heart, label: "Circulation", desc: "Improved blood flow" },
-  { icon: Brain, label: "Mental Clarity", desc: "Sharper cognitive function" },
+const outcomes = [
+  "Reduced chronic pain",
+  "Deeper, restorative sleep",
+  "Improved circulation",
+  "Greater mental clarity",
+  "Reduced inflammation",
+  "Stronger immune response",
+  "Faster recovery",
+  "Renewed energy",
 ];
-
-function AnimatedCard({
-  children,
-  delay,
-}: {
-  children: React.ReactNode;
-  delay: number;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay }}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 export default function Technology() {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="technology" className="py-24 md:py-32 bg-white" ref={sectionRef}>
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
+    <section id="technology" className="py-28 md:py-40 bg-warm-white" ref={ref}>
+      <div className="max-w-6xl mx-auto px-8">
+        {/* Section intro */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="max-w-2xl mb-24"
         >
-          <span className="text-emerald text-sm font-semibold tracking-widest uppercase">
+          <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-4 font-light">
             The Science
-          </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal mt-4 mb-6">
-            Three Technologies.
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl text-charcoal leading-[1.15] mb-6">
+            Three ancient principles.
             <br />
-            <span className="gradient-text">One Mission.</span>
+            <em className="text-copper">One modern device.</em>
           </h2>
-          <p className="text-lg text-charcoal/60 max-w-2xl mx-auto">
-            OlyLife combines PEMF, Terahertz, and Geomagnetic frequencies into
-            devices that support your body&apos;s natural ability to heal,
-            recover, and thrive.
+          <p className="text-warm-gray text-lg leading-relaxed font-light">
+            OlyLife doesn&apos;t mask symptoms. It works at the cellular level —
+            supporting your body&apos;s natural ability to heal, restore, and
+            protect itself.
           </p>
         </motion.div>
 
-        {/* Technology cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-24">
-          {technologies.map((tech, i) => (
-            <AnimatedCard key={tech.title} delay={i * 0.2}>
-              <div className="group relative bg-cream rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-emerald/20">
-                <div className="w-16 h-16 bg-emerald/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald/20 transition-colors">
-                  <tech.icon size={28} className="text-emerald" />
-                </div>
-                <p className="text-xs text-emerald font-semibold tracking-widest uppercase mb-2">
-                  {tech.subtitle}
-                </p>
-                <h3 className="text-2xl font-bold text-charcoal mb-4">
-                  {tech.title}
+        {/* Pillars */}
+        <div className="space-y-0">
+          {pillars.map((pillar, i) => (
+            <motion.div
+              key={pillar.number}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.2 + i * 0.15 }}
+              className="grid md:grid-cols-12 gap-6 md:gap-12 py-12 border-t border-sand/60"
+            >
+              <div className="md:col-span-1">
+                <span className="text-stone text-sm font-light">
+                  {pillar.number}
+                </span>
+              </div>
+              <div className="md:col-span-4">
+                <h3 className="font-serif text-2xl md:text-3xl text-charcoal mb-1">
+                  {pillar.title}
                 </h3>
-                <p className="text-charcoal/60 leading-relaxed">
-                  {tech.description}
+                <p className="text-[12px] tracking-[0.2em] uppercase text-sage font-light">
+                  {pillar.subtitle}
                 </p>
-                {/* Decorative line */}
-                <div className="absolute bottom-0 left-8 right-8 h-1 bg-gradient-to-r from-emerald to-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-            </AnimatedCard>
+              <div className="md:col-span-7">
+                <p className="text-warm-gray leading-[1.8] font-light text-[15px]">
+                  {pillar.body}
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Benefits grid */}
+        {/* Outcomes */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-24 pt-16 border-t border-sand/60"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-            What OlyLife Can Do For You
-          </h3>
-          <p className="text-charcoal/60 max-w-xl mx-auto">
-            Backed by thousands of real testimonials from people who have
-            experienced life-changing results.
+          <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-10 font-light">
+            What our customers experience
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {benefits.map((benefit, i) => (
-            <AnimatedCard key={benefit.label} delay={0.8 + i * 0.1}>
-              <div className="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1 group">
-                <div className="w-12 h-12 bg-emerald/10 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald group-hover:text-white transition-colors">
-                  <benefit.icon
-                    size={22}
-                    className="text-emerald group-hover:text-white transition-colors"
-                  />
-                </div>
-                <h4 className="font-bold text-charcoal text-sm mb-1">
-                  {benefit.label}
-                </h4>
-                <p className="text-xs text-charcoal/50">{benefit.desc}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-8">
+            {outcomes.map((outcome) => (
+              <div key={outcome} className="flex items-center gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-copper/60 flex-shrink-0" />
+                <span className="text-charcoal/70 text-[15px] font-light">
+                  {outcome}
+                </span>
               </div>
-            </AnimatedCard>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
