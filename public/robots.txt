@@ -1,0 +1,5 @@
+# OlyLife PEMF & Terahertz Wellness Devices
+User-agent: *
+Allow: /
+
+Sitemap: https://olylife-site.vercel.app/sitemap.xml

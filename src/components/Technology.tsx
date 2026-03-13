@@ -41,7 +41,7 @@ export default function Technology() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="technology" className="py-28 md:py-40 bg-warm-white" ref={ref}>
+    <section id="technology" className="py-28 md:py-40 bg-warm-white" ref={ref} aria-label="PEMF and Terahertz therapy science and technology">
       <div className="max-w-6xl mx-auto px-8">
         {/* Section intro */}
         <motion.div
@@ -123,7 +123,7 @@ export default function Technology() {
             <div className="relative aspect-[4/5] hidden lg:block">
               <Image
                 src="/images/lifestyle-woman.webp"
-                alt="Wellness and healing"
+                alt="Woman experiencing natural pain relief and wellness benefits from OlyLife PEMF therapy"
                 fill
                 className="object-cover"
               />

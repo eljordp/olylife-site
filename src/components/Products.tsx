@@ -75,7 +75,7 @@ export default function Products() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="products" className="py-28 md:py-40 bg-background" ref={ref}>
+    <section id="products" className="py-28 md:py-40 bg-background" ref={ref} aria-label="OlyLife PEMF therapy device collection">
       <div className="max-w-6xl mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ export default function Products() {
               <div className="relative bg-deep-green flex items-center justify-center p-8 md:p-12 min-h-[300px] md:min-h-[400px]">
                 <Image
                   src={products[0].image}
-                  alt={products[0].name}
+                  alt="OlyLife Tera-P90+ complete PEMF and Terahertz healing system — best PEMF device for home use"
                   width={420}
                   height={420}
                   className="object-contain drop-shadow-lg relative z-10"
@@ -151,7 +151,7 @@ export default function Products() {
                   href="#"
                   className="group inline-flex items-center gap-3 border border-white/30 hover:border-white/60 text-white px-8 py-3.5 text-[13px] tracking-[0.15em] uppercase transition-all duration-500 self-start"
                 >
-                  Learn more
+                  Learn more about the Tera-P90+
                   <span className="transition-transform group-hover:translate-x-1">
                     &rarr;
                   </span>
@@ -175,7 +175,7 @@ export default function Products() {
               <div className="relative bg-ivory flex items-center justify-center p-6 aspect-[4/3] overflow-hidden">
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={`${product.name} — ${product.subtitle} — OlyLife PEMF wellness device`}
                   width={340}
                   height={340}
                   className="object-contain group-hover:scale-105 transition-transform duration-700"
@@ -199,7 +199,7 @@ export default function Products() {
                   href="#"
                   className="inline-flex items-center gap-2 text-charcoal text-[13px] tracking-[0.1em] uppercase border-b border-charcoal/30 pb-0.5 hover:border-sage hover:text-sage transition-colors duration-300"
                 >
-                  Details
+                  View {product.name} details
                   <span className="transition-transform group-hover:translate-x-1">
                     &rarr;
                   </span>

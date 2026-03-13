@@ -8,7 +8,7 @@ export default function CTA() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-28 md:py-40 bg-warm-white" ref={ref}>
+    <section className="py-28 md:py-40 bg-warm-white" ref={ref} aria-label="Start your OlyLife healing journey">
       <div className="max-w-3xl mx-auto px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function CTA() {
               href="#products"
               className="group inline-flex items-center gap-3 bg-deep-green hover:bg-charcoal text-white px-10 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500"
             >
-              Browse the collection
+              Browse OlyLife PEMF therapy devices
               <span className="transition-transform group-hover:translate-x-1">
                 &rarr;
               </span>
@@ -42,7 +42,7 @@ export default function CTA() {
               href="#testimonials"
               className="inline-flex items-center gap-2 text-warm-gray hover:text-charcoal text-[13px] tracking-[0.15em] uppercase transition-colors duration-300 border-b border-warm-gray/30 pb-0.5"
             >
-              Read more stories
+              Read more OlyLife customer reviews
             </a>
           </div>
 

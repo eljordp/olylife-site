@@ -15,7 +15,7 @@ const footerLinks = {
     { label: "Become a Distributor", href: "#" },
   ],
   Support: [
-    { label: "FAQ", href: "#" },
+    { label: "FAQ", href: "#faq" },
     { label: "Shipping & Returns", href: "#" },
     { label: "Warranty", href: "#" },
     { label: "Privacy Policy", href: "#" },
@@ -24,7 +24,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="bg-charcoal text-white" aria-label="OlyLife site footer">
       <div className="max-w-6xl mx-auto px-8 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-16">
           <div className="lg:col-span-2">

@@ -8,6 +8,7 @@ export default function Hero() {
     <section
       id="hero"
       className="relative min-h-screen flex items-end overflow-hidden"
+      aria-label="OlyLife PEMF and Terahertz wellness therapy — start your healing journey"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-deep-green" />
@@ -23,7 +24,7 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-[0.07]">
         <Image
           src="/images/lifestyle-woman.webp"
-          alt=""
+          alt="Woman experiencing wellness and natural healing with OlyLife PEMF therapy"
           fill
           className="object-cover object-top"
           priority
@@ -78,7 +79,7 @@ export default function Hero() {
                 href="#products"
                 className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-8 py-4 text-sm tracking-[0.15em] uppercase transition-all duration-500"
               >
-                View Product Brochure
+                View OlyLife PEMF Therapy Devices
                 <span className="inline-block transition-transform group-hover:translate-x-1">
                   &rarr;
                 </span>
@@ -87,7 +88,7 @@ export default function Hero() {
                 href="#testimonials"
                 className="inline-flex items-center gap-3 text-white/50 hover:text-white text-sm tracking-[0.15em] uppercase transition-colors duration-300 py-4"
               >
-                Read their stories
+                Read OlyLife customer testimonials
               </a>
             </motion.div>
           </div>
@@ -102,7 +103,7 @@ export default function Hero() {
             <div className="relative">
               <Image
                 src="/images/p90-device.webp"
-                alt="OlyLife Tera-P90"
+                alt="OlyLife Tera-P90 PEMF and Terahertz therapy device for natural pain relief and home wellness"
                 width={500}
                 height={500}
                 className="drop-shadow-2xl"

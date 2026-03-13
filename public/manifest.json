@@ -1,0 +1,21 @@
+{
+  "name": "OlyLife — PEMF & Terahertz Wellness Technology",
+  "short_name": "OlyLife",
+  "description": "Clinically-inspired PEMF and Terahertz therapy devices for total body wellness. Pain relief, better sleep, and renewed energy — trusted by 50,000+ people worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFDF8",
+  "theme_color": "#2D3B28",
+  "icons": [
+    {
+      "src": "/images/oly-life-badge.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/oly-life-badge.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

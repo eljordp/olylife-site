@@ -95,7 +95,7 @@ const testimonials: Testimonial[] = [
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="bg-background border border-sand/60 p-8 min-w-[340px] max-w-[400px] flex-shrink-0 mx-3 hover:border-copper/30 transition-colors duration-500">
+    <article className="bg-background border border-sand/60 p-8 min-w-[340px] max-w-[400px] flex-shrink-0 mx-3 hover:border-copper/30 transition-colors duration-500">
       <p className="text-charcoal/70 text-[15px] leading-[1.85] font-light mb-6 line-clamp-5 italic">
         &ldquo;{testimonial.quote}&rdquo;
       </p>
@@ -110,7 +110,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           {testimonial.condition} &middot; {testimonial.product}
         </p>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -127,6 +127,7 @@ export default function Testimonials() {
       id="testimonials"
       className="py-28 md:py-40 bg-ivory overflow-hidden"
       ref={ref}
+      aria-label="OlyLife customer testimonials and reviews"
     >
       <div className="max-w-6xl mx-auto px-8 mb-20">
         <motion.div

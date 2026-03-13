@@ -28,6 +28,7 @@ export default function Navigation() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.5 }}
+        aria-label="Main navigation"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
             ? "bg-background/90 backdrop-blur-md border-b border-sand/50"
@@ -38,7 +39,7 @@ export default function Navigation() {
           <a href="#hero" className="group flex items-center gap-2.5">
             <Image
               src="/images/oly-life-badge.png"
-              alt="OlyLife"
+              alt="OlyLife PEMF and Terahertz wellness technology logo"
               width={28}
               height={28}
               className="opacity-90"
@@ -80,6 +81,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             className={`md:hidden transition-colors ${
               scrolled ? "text-charcoal" : "text-white"
             }`}

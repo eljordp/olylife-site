@@ -9,7 +9,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" className="py-28 md:py-40 bg-deep-green text-white" ref={ref}>
+    <section id="about" className="py-28 md:py-40 bg-deep-green text-white" ref={ref} aria-label="About OlyLife International and our wellness mission">
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid lg:grid-cols-2 gap-20">
           <motion.div
@@ -58,7 +58,7 @@ export default function About() {
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
                   src="/images/hero-lady.webp"
-                  alt="OlyLife customer"
+                  alt="Senior woman enjoying improved wellness and natural pain relief with OlyLife PEMF therapy"
                   fill
                   className="object-cover"
                 />
@@ -67,7 +67,7 @@ export default function About() {
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
                   src="/images/lifestyle-man.webp"
-                  alt="OlyLife customer"
+                  alt="Active senior man benefiting from OlyLife Terahertz frequency healing and PEMF therapy"
                   fill
                   className="object-cover"
                 />
