@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "Science", href: "#technology" },
-  { label: "Collection", href: "#products" },
+  { label: "How It Works", href: "#technology" },
+  { label: "Devices", href: "#products" },
   { label: "Stories", href: "#testimonials" },
-  { label: "Our Mission", href: "#about" },
+  { label: "Our Ohana", href: "#about" },
 ];
 
 export default function Navigation() {

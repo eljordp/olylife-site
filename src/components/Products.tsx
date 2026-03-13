@@ -81,20 +81,14 @@ export default function Products() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl mb-20"
+          className="text-center mb-16"
         >
           <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-4 font-light">
             The Collection
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal leading-[1.15] mb-6">
-            Instruments of
-            <br />
-            <em className="text-copper">healing.</em>
+          <h2 className="font-serif text-4xl md:text-5xl text-charcoal leading-[1.15]">
+            Our Devices
           </h2>
-          <p className="text-warm-gray text-lg leading-relaxed font-light">
-            Each device is designed with a single purpose: to help your body do
-            what it was always meant to do — heal itself.
-          </p>
         </motion.div>
 
         {/* Featured product — Tera-P90+ */}

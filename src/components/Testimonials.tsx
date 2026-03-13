@@ -136,7 +136,7 @@ export default function Testimonials() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-4 font-light">
-            Their Words, Not Ours
+            Stories From Our Ohana
           </p>
           <div className="grid md:grid-cols-2 gap-12 items-end">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal leading-[1.15]">
@@ -146,9 +146,8 @@ export default function Testimonials() {
             </h2>
             <div>
               <p className="text-warm-gray text-[15px] leading-relaxed font-light">
-                Over 50,000 people across 30 countries have experienced what
-                OlyLife can do. These are their stories — unscripted, unfiltered,
-                and deeply personal.
+                Over 50,000 people across 30 countries are part of the OlyLife
+                ohana. These are their stories — shared with aloha.
               </p>
               <div className="flex gap-12 mt-6">
                 <div>

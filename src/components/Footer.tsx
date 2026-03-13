@@ -30,8 +30,8 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <p className="font-serif text-2xl mb-6">OlyLife</p>
             <p className="text-white/35 text-[14px] leading-[1.8] font-light max-w-xs mb-8">
-              Supporting total body wellness through PEMF and Terahertz
-              technology. Empowering health. Enriching life.
+              Healing shared with aloha. PEMF and Terahertz wellness
+              technology for your whole ohana.
             </p>
             <p className="text-[11px] text-white/15 leading-relaxed font-light">
               These statements have not been evaluated by the FDA. OlyLife
@@ -69,7 +69,7 @@ export default function Footer() {
             reserved.
           </p>
           <p className="text-white/15 text-[12px] font-light">
-            Wellness technology inspired by nature.
+            Shared with aloha.
           </p>
         </div>
       </div>
