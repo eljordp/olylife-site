@@ -18,7 +18,7 @@ export default function About() {
           className="object-cover"
         />
       </div>
-      <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -40,7 +40,7 @@ export default function About() {
             by 50,000+ people across 30+ countries.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-12">
+          <div className="flex flex-wrap justify-center gap-8 sm:gap-12">
             {[
               { number: "50,000+", label: "Customers" },
               { number: "30+", label: "Countries" },
@@ -52,7 +52,7 @@ export default function About() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
               >
-                <p className="font-serif text-4xl text-copper-light mb-1">
+                <p className="font-serif text-3xl sm:text-4xl text-copper-light mb-1">
                   {stat.number}
                 </p>
                 <p className="text-white/40 text-[13px] font-light">

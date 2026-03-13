@@ -59,7 +59,7 @@ export default function FAQ() {
       ref={ref}
       aria-label="Frequently Asked Questions about OlyLife PEMF therapy"
     >
-      <div className="max-w-3xl mx-auto px-8">
+      <div className="max-w-3xl mx-auto px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -81,7 +81,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggle(index)}
-                className="w-full py-6 flex items-start justify-between gap-6 text-left group"
+                className="w-full py-5 sm:py-6 flex items-start justify-between gap-4 sm:gap-6 text-left group"
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
@@ -106,7 +106,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <p className="text-warm-gray text-[15px] leading-[1.9] font-light pb-6 pr-12">
+                    <p className="text-warm-gray text-[15px] leading-[1.9] font-light pb-6 pr-4 sm:pr-12">
                       {faq.answer}
                     </p>
                   </motion.div>

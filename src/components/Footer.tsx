@@ -25,9 +25,9 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-white" aria-label="OlyLife site footer">
-      <div className="max-w-6xl mx-auto px-8 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-16">
-          <div className="lg:col-span-2">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-12 sm:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16">
+          <div className="col-span-2 lg:col-span-2">
             <p className="font-serif text-2xl mb-6">OlyLife</p>
             <p className="text-white/35 text-[14px] leading-[1.8] font-light max-w-xs mb-8">
               Natural healing through PEMF and Terahertz technology.
@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/20 text-[12px] font-light">
             &copy; {new Date().getFullYear()} OlyLife International. All rights
             reserved.

@@ -9,7 +9,7 @@ export default function CTA() {
 
   return (
     <section className="py-24 md:py-32 bg-warm-white" ref={ref} aria-label="Start your OlyLife healing journey">
-      <div className="max-w-2xl mx-auto px-8 text-center">
+      <div className="max-w-2xl mx-auto px-5 sm:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -23,7 +23,7 @@ export default function CTA() {
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
             <a
               href="#products"
-              className="group inline-flex items-center gap-3 bg-deep-green hover:bg-charcoal text-white px-10 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500"
+              className="group inline-flex items-center justify-center gap-3 bg-deep-green hover:bg-charcoal text-white px-10 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500 w-full sm:w-auto"
             >
               View Devices
               <span className="transition-transform group-hover:translate-x-1">

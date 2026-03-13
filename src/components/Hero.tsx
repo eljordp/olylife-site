@@ -28,8 +28,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <motion.p
               initial={{ opacity: 0 }}
@@ -44,7 +44,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6"
+              className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6"
             >
               Start your
               <br />
@@ -69,7 +69,7 @@ export default function Hero() {
             >
               <a
                 href="#products"
-                className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-8 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500"
+                className="group inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-8 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500 w-full sm:w-auto"
               >
                 View Devices
                 <span className="inline-block transition-transform group-hover:translate-x-1">
@@ -89,14 +89,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="hidden lg:flex justify-center"
+            className="flex justify-center"
           >
             <Image
               src="/images/p90-device.webp"
               alt="OlyLife Tera-P90 PEMF and Terahertz therapy device"
               width={460}
               height={460}
-              className="drop-shadow-2xl"
+              className="drop-shadow-2xl w-[240px] sm:w-[320px] lg:w-[460px] h-auto"
               priority
             />
           </motion.div>

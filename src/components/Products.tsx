@@ -76,7 +76,7 @@ export default function Products() {
 
   return (
     <section id="products" className="py-28 md:py-40 bg-background" ref={ref} aria-label="OlyLife PEMF therapy device collection">
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -99,7 +99,7 @@ export default function Products() {
           className="mb-16"
         >
           <div className="bg-deep-green text-white relative overflow-hidden">
-            <span className="absolute top-8 right-8 z-10 text-[11px] tracking-[0.2em] uppercase text-copper-light border border-copper-light/30 px-3 py-1">
+            <span className="absolute top-4 right-4 sm:top-8 sm:right-8 z-10 text-[11px] tracking-[0.2em] uppercase text-copper-light border border-copper-light/30 px-3 py-1">
               Recommended
             </span>
             <div className="grid md:grid-cols-2">
@@ -115,14 +115,14 @@ export default function Products() {
                 <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-transparent" />
               </div>
               {/* Copy side */}
-              <div className="p-10 md:p-16 flex flex-col justify-center">
+              <div className="p-6 sm:p-10 md:p-16 flex flex-col justify-center">
                 <p className="text-[12px] tracking-[0.3em] uppercase text-white/40 mb-3 font-light">
                   {products[0].subtitle}
                 </p>
-                <h3 className="font-serif text-4xl md:text-5xl mb-2">
+                <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-2">
                   {products[0].name}
                 </h3>
-                <p className="font-serif text-3xl text-copper-light mb-8">
+                <p className="font-serif text-2xl sm:text-3xl text-copper-light mb-6 sm:mb-8">
                   {products[0].price}
                 </p>
                 <p className="text-white/60 leading-[1.8] font-light text-[15px] mb-8">
@@ -156,7 +156,7 @@ export default function Products() {
         </motion.div>
 
         {/* Product grid */}
-        <div className="grid md:grid-cols-2 gap-px bg-sand/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-sand/40">
           {products.slice(1).map((product, i) => (
             <motion.div
               key={product.name}
@@ -176,7 +176,7 @@ export default function Products() {
                 />
               </div>
               {/* Product info */}
-              <div className="p-8 md:p-10">
+              <div className="p-5 sm:p-8 md:p-10">
                 <p className="text-[11px] tracking-[0.25em] uppercase text-sage mb-3 font-light">
                   {product.subtitle}
                 </p>

@@ -95,7 +95,7 @@ const testimonials: Testimonial[] = [
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <article className="bg-background border border-sand/60 p-8 min-w-[340px] max-w-[400px] flex-shrink-0 mx-3 hover:border-copper/30 transition-colors duration-500">
+    <article className="bg-background border border-sand/60 p-5 sm:p-8 min-w-[280px] sm:min-w-[340px] max-w-[400px] flex-shrink-0 mx-2 sm:mx-3 hover:border-copper/30 transition-colors duration-500">
       <p className="text-charcoal/70 text-[15px] leading-[1.85] font-light mb-6 line-clamp-5 italic">
         &ldquo;{testimonial.quote}&rdquo;
       </p>
@@ -129,7 +129,7 @@ export default function Testimonials() {
       ref={ref}
       aria-label="OlyLife customer testimonials and reviews"
     >
-      <div className="max-w-6xl mx-auto px-8 mb-20">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 mb-12 sm:mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -138,8 +138,8 @@ export default function Testimonials() {
           <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-4 font-light">
             Their Words, Not Ours
           </p>
-          <div className="grid md:grid-cols-2 gap-12 items-end">
-            <h2 className="font-serif text-4xl md:text-5xl text-charcoal leading-[1.15]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 items-end">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal leading-[1.15]">
               Real people.
               <br />
               <em className="text-copper">Real healing.</em>
@@ -149,7 +149,7 @@ export default function Testimonials() {
                 Over 50,000 people across 30 countries trust OlyLife.
                 These are their stories.
               </p>
-              <div className="flex gap-12 mt-6">
+              <div className="flex gap-6 sm:gap-12 mt-6">
                 <div>
                   <p className="font-serif text-3xl text-charcoal">50,000+</p>
                   <p className="text-[11px] tracking-[0.2em] uppercase text-warm-gray mt-1">
@@ -196,7 +196,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-8 mt-20 text-center">
+      <div className="max-w-4xl mx-auto px-5 sm:px-8 mt-12 sm:mt-20 text-center">
         <p className="text-[11px] text-warm-gray/50 leading-relaxed font-light tracking-wide">
           Individual results may vary. These statements have not been evaluated
           by the FDA. OlyLife products are not intended to diagnose, treat,

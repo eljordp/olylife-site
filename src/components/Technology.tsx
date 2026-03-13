@@ -42,7 +42,7 @@ export default function Technology() {
           className="object-cover"
         />
       </div>
-      <div className="relative z-10 max-w-5xl mx-auto px-8">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -59,7 +59,7 @@ export default function Technology() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-12 sm:mb-20">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.title}
@@ -82,7 +82,7 @@ export default function Technology() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap justify-center gap-x-10 gap-y-4 pt-10 border-t border-sand/60"
+          className="flex flex-wrap justify-center gap-x-6 sm:gap-x-10 gap-y-3 sm:gap-y-4 pt-8 sm:pt-10 border-t border-sand/60"
         >
           {outcomes.map((outcome) => (
             <div key={outcome} className="flex items-center gap-2.5">

@@ -35,7 +35,7 @@ export default function Navigation() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-8 py-5 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between">
           <a href="#hero" className="group flex items-center gap-2.5">
             <Image
               src="/images/oly-life-badge.png"
@@ -102,7 +102,8 @@ export default function Navigation() {
           >
             <button
               onClick={() => setMobileOpen(false)}
-              className="absolute top-5 right-8 text-charcoal"
+              className="absolute top-4 right-5 sm:right-8 text-charcoal p-2"
+              aria-label="Close navigation menu"
             >
               <X size={24} />
             </button>
