@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import Technology from "@/components/Technology";
 import Products from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
@@ -218,8 +217,7 @@ export default function Home() {
       <main>
         <Navigation />
         <Hero />
-        <Technology />
-        <Products />
+<Products />
         <Testimonials />
         <About />
         <CTA />
