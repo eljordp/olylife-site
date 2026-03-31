@@ -7,7 +7,7 @@ import Image from "next/image";
 const products = [
   {
     name: "Tera-P90+",
-    subtitle: "The Complete Healing System",
+    subtitle: "The Complete Whole Body System",
     price: "$1,500",
     image: "/images/tera-p90-plus.png",
     description:
@@ -68,6 +68,39 @@ const products = [
     badge: "",
     featured: false,
   },
+  {
+    name: "Bama Air",
+    subtitle: "Air Wellness Technology",
+    price: "Inquire for pricing",
+    image: "/images/bama-air.png",
+    description:
+      "Advanced air wellness technology designed to purify and energize your environment. Creates a cleaner, healthier space to support your overall well-being.",
+    highlights: ["Air purification", "Wellness-focused", "Home & office use"],
+    badge: "",
+    featured: false,
+  },
+  {
+    name: "Shaken Massager",
+    subtitle: "Percussion Recovery Device",
+    price: "Inquire for pricing",
+    image: "/images/shaken-massager.png",
+    description:
+      "Targeted percussion therapy for deep muscle recovery and tension relief. Designed for post-workout recovery, chronic soreness, and daily relaxation.",
+    highlights: ["Deep tissue relief", "Portable design", "Multiple intensities"],
+    badge: "",
+    featured: false,
+  },
+  {
+    name: "Skyline SL-6",
+    subtitle: "Advanced Therapy System",
+    price: "Inquire for pricing",
+    image: "/images/skyline-sl6.png",
+    description:
+      "OlyLife's latest innovation in wellness technology. The Skyline SL-6 delivers advanced therapeutic frequencies for whole-body support and accelerated recovery.",
+    highlights: ["Latest technology", "Full-body therapy", "Advanced settings"],
+    badge: "New",
+    featured: false,
+  },
 ];
 
 export default function Products() {
@@ -122,8 +155,11 @@ export default function Products() {
                 <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-2">
                   {products[0].name}
                 </h3>
-                <p className="font-serif text-2xl sm:text-3xl text-copper-light mb-6 sm:mb-8">
+                <p className="font-serif text-2xl sm:text-3xl text-copper-light mb-1">
                   {products[0].price}
+                </p>
+                <p className="text-[11px] text-white/30 font-light mb-6 sm:mb-8">
+                  *Final pricing will include shipping and any applicable taxes
                 </p>
                 <p className="text-white/60 leading-[1.8] font-light text-[15px] mb-8">
                   {products[0].description}
@@ -183,8 +219,11 @@ export default function Products() {
                 <h3 className="font-serif text-2xl text-charcoal mb-1">
                   {product.name}
                 </h3>
-                <p className="font-serif text-xl text-copper mb-5">
+                <p className="font-serif text-xl text-copper mb-1">
                   {product.price}
+                </p>
+                <p className="text-[11px] text-warm-gray/50 font-light mb-5">
+                  *Final pricing will include shipping and any applicable taxes
                 </p>
                 <p className="text-warm-gray text-[14px] leading-[1.8] font-light mb-6">
                   {product.description}

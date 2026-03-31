@@ -8,7 +8,7 @@ export default function Hero() {
     <section
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
-      aria-label="OlyLife PEMF and Terahertz wellness therapy — start your healing journey"
+      aria-label="OlyLife PEMF and Terahertz wellness therapy — start your health and wellness journey"
     >
       <div className="absolute inset-0 bg-deep-green" />
       <div className="absolute inset-0 opacity-[0.08]">
@@ -46,9 +46,9 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.3 }}
               className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6"
             >
-              Start your
+              Start your health
               <br />
-              healing <em className="text-copper-light font-normal">journey.</em>
+              &amp; wellness <em className="text-copper-light font-normal">journey.</em>
             </motion.h1>
 
             <motion.p

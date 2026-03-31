@@ -34,12 +34,12 @@ const faqs: FAQItem[] = [
   {
     question: "How quickly will I feel results?",
     answer:
-      "Many people feel a difference within the first few sessions. For chronic conditions, most notice significant improvement within 2-4 weeks of daily 30-minute sessions.",
+      "Results vary based on individual experience. Many people notice a difference within their first few sessions — for ongoing conditions, most see meaningful improvement within 2-4 weeks of consistent daily use.",
   },
   {
     question: "Is there a guarantee?",
     answer:
-      "Yes — every OlyLife device comes with a 30-day satisfaction guarantee and full product warranty. We stand behind every device we sell.",
+      "We stand behind every device we sell. Not sure yet? We encourage you to try a free session first — experience the results before you commit. Contact us to book yours.",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function FAQ() {
           </h2>
         </motion.div>
 
-        <div className="divide-y divide-sand/60">
+        <div className="divide-y divide-sand/60 mb-16">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -115,6 +115,33 @@ export default function FAQ() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="border border-sand/60 p-8 sm:p-12 text-center"
+        >
+          <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-4 font-light">
+            Experience It First
+          </p>
+          <h3 className="font-serif text-3xl text-charcoal mb-3">
+            Try a free session.
+          </h3>
+          <p className="text-warm-gray text-[15px] leading-[1.8] font-light mb-8 max-w-md mx-auto">
+            Feel relaxation, pain relief, and renewed energy before you buy.
+            Inquire below to book your complimentary session.
+          </p>
+          <a
+            href="mailto:info@olyprocessing.com"
+            className="group inline-flex items-center justify-center gap-3 bg-deep-green hover:bg-charcoal text-white px-10 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500"
+          >
+            Book Your Free Session
+            <span className="transition-transform group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

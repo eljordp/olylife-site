@@ -7,6 +7,9 @@ const footerLinks = {
     { label: "Vitality Wand", href: "#products" },
     { label: "Galaxy G-One", href: "#products" },
     { label: "H+ Hydrogen Infuser", href: "#products" },
+    { label: "Bama Air", href: "#products" },
+    { label: "Shaken Massager", href: "#products" },
+    { label: "Skyline SL-6", href: "#products" },
   ],
   Company: [
     { label: "Our Mission", href: "#about" },
@@ -34,9 +37,10 @@ export default function Footer() {
               Better sleep. Less pain. More life.
             </p>
             <p className="text-[11px] text-white/15 leading-relaxed font-light">
-              These statements have not been evaluated by the FDA. OlyLife
-              products are not intended to diagnose, treat, cure, or prevent any
-              disease. Individual results may vary.
+              OlyLife products are advanced wellness devices that are safe and
+              non-invasive. They are not medical devices and are not intended to
+              diagnose, treat, cure, or prevent any disease. Individual results
+              may vary.
             </p>
           </div>
 
