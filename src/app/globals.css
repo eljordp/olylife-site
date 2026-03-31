@@ -4,9 +4,9 @@
 :root {
   --background: #FFF8EE;
   --foreground: #3B2F2F;
-  --sage: #3D8B8B;
-  --sage-light: #5AABAB;
-  --sage-dark: #2D6B6B;
+  --sage: #4A7A55;
+  --sage-light: #5E9B6E;
+  --sage-dark: #2E5C3D;
   --warm-white: #F5EDE0;
   --ivory: #EDE5D5;
   --stone: #A89888;
@@ -15,7 +15,7 @@
   --sand: #E2D2BE;
   --copper: #D4944C;
   --copper-light: #E8B87A;
-  --deep-green: #1B4B4B;
+  --deep-green: #1B3D28;
 }
 
 @theme inline {
