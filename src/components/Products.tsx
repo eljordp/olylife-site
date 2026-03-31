@@ -114,6 +114,33 @@ export default function Products() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
+          className="border border-sand/60 p-8 sm:p-12 text-center mb-16"
+        >
+          <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-4 font-light">
+            Experience It First
+          </p>
+          <h3 className="font-serif text-3xl text-charcoal mb-3">
+            Try a free session.
+          </h3>
+          <p className="text-warm-gray text-[15px] leading-[1.8] font-light mb-8 max-w-md mx-auto">
+            Feel relaxation, pain relief, and renewed energy before you buy.
+            Inquire below to book your complimentary session.
+          </p>
+          <a
+            href="mailto:info@olyprocessing.com"
+            className="group inline-flex items-center justify-center gap-3 bg-deep-green hover:bg-charcoal text-white px-10 py-4 text-[13px] tracking-[0.15em] uppercase transition-all duration-500"
+          >
+            Book Your Free Session
+            <span className="transition-transform group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <p className="text-[12px] tracking-[0.3em] uppercase text-sage mb-4 font-light">
