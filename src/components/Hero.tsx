@@ -31,15 +31,6 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="text-[13px] tracking-[0.3em] uppercase text-white/40 mb-6 font-light"
-            >
-              Welcome to OlyLife
-            </motion.p>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
